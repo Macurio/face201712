@@ -16,12 +16,22 @@ namespace face201712
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            DispatcherUnhandledException += App_DispatcherUnhandledException;
+        }
+        void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show("Error encountered! Please contact support." + Environment.NewLine + e.Exception.Message);
+            //Shutdown(1);
+            e.Handled = true;
+        }
         //静态和全局参数表 
         const string APP_ID = "10447843";
         const string API_KEY = "bHnKHuGkpQEaSU5k68F5MGen";
         const string SECRET_KEY = "EojiKc7KgHF6FySfgp9lZYPynjAonRp6 ";
         public static string filename1, filename2,filename;
-        public static string uid, uinfo, gid;
+        public static string uid=null, uinfo=null, gid=null;
 
         public static void FaceRegister()
         {
@@ -89,3 +99,5 @@ namespace face201712
         }
     }
 }
+//未实现的功能：
+//连接数据库保存结果，批量注册图片  
