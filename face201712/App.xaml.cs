@@ -31,20 +31,29 @@ namespace face201712
         const string API_KEY = "bHnKHuGkpQEaSU5k68F5MGen";
         const string SECRET_KEY = "EojiKc7KgHF6FySfgp9lZYPynjAonRp6 ";
         public static string filename1, filename2,filename;
-        public static string uid=null, uinfo=null, gid=null;
+        public static string uid, uinfo, gid;
+        public static string toGroupId, fromGroupId;
+        public static string prompting_message;
+        public static string str1, str2, str3;
 
         public static void FaceRegister()
         {
+            uid = str1;
+            gid = str2;
+            uinfo = str3;
             var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
-            var image1 = File.ReadAllBytes(App.filename);
-            var result = client.User.Register(image1, App.uid, App.uinfo, new[] { App.gid })["log_id"];
+            var image1 = File.ReadAllBytes(filename);
+            var result = client.User.Register(image1, uid, uinfo, new[] { gid })["log_id"];
             MessageBox.Show(result.ToString());
         }
         public static void FaceVerify()
         {
+            uid = str1;
+            gid = str2;
+            //MessageBox.Show(uid);
             var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
-            var image1 = File.ReadAllBytes(App.filename);
-            var result = client.User.Verify(image1, App.uid, new[] { App.gid }, 1)["result"][0];
+            var image1 = File.ReadAllBytes(filename);
+            var result = client.User.Verify(image1, uid, new[] { gid }, 1)["result"][0];
             MessageBox.Show(result.ToString());
         }
         public static void FaceMatch()
@@ -59,7 +68,7 @@ namespace face201712
         public static void FaceDetect()
         {
             var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
-            var image = File.ReadAllBytes(App.filename);
+            var image = File.ReadAllBytes(filename);
             var options = new Dictionary<string, object>(){
                 {"face_fields","beauty,age"}
             };
@@ -68,21 +77,27 @@ namespace face201712
         }
         public static void UserInfo()
         {
+            uid = str1;
             var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
-            var result = client.User.GetInfo(App.uid);
+            var result = client.User.GetInfo(uid);
             MessageBox.Show(result.ToString());
         }
         public static void FaceDelete()
         {
+            uid = str1;
+            gid = str2;
             var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
-            var result = client.User.Delete(App.uid, new[] { App.gid });
+            var result = client.User.Delete(uid, new[] { gid });
             MessageBox.Show(result.ToString());
         }
         public static void FaceUpdate()
         {
+            uid = str1;
+            gid = str2;
+            uinfo = str3;
             var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
-            var image1 = File.ReadAllBytes(App.filename);
-            var result = client.User.Update(image1, App.uid, App.gid, App.uinfo);
+            var image1 = File.ReadAllBytes(filename);
+            var result = client.User.Update(image1, uid, gid, uinfo);
             MessageBox.Show(result.ToString());
         }
         public static void GroupList()
@@ -93,8 +108,35 @@ namespace face201712
         }
         public static void GroupUsers()
         {
+            gid = str1;
             var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
-            var result = client.Group.GetUsers(App.gid, 0, 100);
+            var result = client.Group.GetUsers(gid, 0, 100);
+            MessageBox.Show(result.ToString());
+        }
+        public static void FaceIdentify()
+        {
+            gid = str1;
+            //MessageBox.Show(gid);
+            var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
+            var image1 = File.ReadAllBytes(filename);
+            var result = client.User.Identify(image1, new[] { gid }, 1, 1);
+            MessageBox.Show(result.ToString());
+        }
+        public static void GroupAddUser()
+        {
+            toGroupId = str1;
+            uid = str2;
+            fromGroupId = str3;
+            var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
+            var result = client.Group.AddUser(new[] { toGroupId }, uid, fromGroupId);
+            MessageBox.Show(result.ToString());
+        }
+        public static void GroupDeleteUser()
+        {
+            uid = str1;
+            gid = str2;
+            var client = new Baidu.Aip.Face.Face(API_KEY, SECRET_KEY);
+            var result = client.Group.DeleteUser(new[] { gid }, uid);
             MessageBox.Show(result.ToString());
         }
     }

@@ -30,8 +30,9 @@ namespace face201712
         {
             try
             {
+                App.prompting_message = "uid gid uinfo";
 new Window_select().ShowDialog();
-            new Window_input().ShowDialog();
+            new _3input().ShowDialog();
             App.FaceRegister();
             }
             catch (Exception)
@@ -45,8 +46,9 @@ new Window_select().ShowDialog();
         {
             try
             {
+                App.prompting_message = "uid gid";
 new Window_select().ShowDialog();
-            new Window_input().ShowDialog();
+            new _2input().ShowDialog();
             App.FaceVerify();
             }
             catch (Exception)
@@ -93,7 +95,8 @@ MessageBox.Show("error!");
         {
             try
             {
-            new Window_input().ShowDialog();
+                App.prompting_message = "uid";
+            new _1_input().ShowDialog();
             App.UserInfo();
             }
             catch (Exception)
@@ -107,7 +110,8 @@ MessageBox.Show("error!");
         {
             try
             {
-            new Window_input().ShowDialog();
+                App.prompting_message = "uid gid";
+            new _2input().ShowDialog();
             App.FaceDelete();
             }
             catch (Exception)
@@ -121,8 +125,9 @@ MessageBox.Show("error!");
         {
             try
             {
+                App.prompting_message = "uid gid uinfo";
             new Window_select().ShowDialog();
-            new Window_input().ShowDialog();
+            new _3input().ShowDialog();
             App.FaceUpdate();
             }
             catch (Exception)
@@ -149,7 +154,8 @@ MessageBox.Show("error!");
         {
             try
             {
-new Window_input().ShowDialog();
+                App.prompting_message = "gid";
+new _1_input().ShowDialog();
             App.GroupUsers();
             }
             catch (Exception)
@@ -162,6 +168,49 @@ new Window_input().ShowDialog();
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void face_identify_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                App.prompting_message = "gid";
+                new Window_select().ShowDialog();
+                new _1_input().ShowDialog();
+                App.FaceIdentify();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error!");
+            }
+        }
+
+        private void group_add_user_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                App.prompting_message = "toGroupId uid fromGroupId";
+                new _3input().ShowDialog();
+                App.GroupAddUser();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error!");
+            }
+        }
+
+        private void group_delete_user_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                App.prompting_message="uid gid";
+                new _2input().ShowDialog();
+                App.GroupDeleteUser();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error!");
+            }
         }
 
     }

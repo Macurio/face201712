@@ -22,3 +22,9 @@ c:\users\administrator\documents\visual studio 2013\Projects\face201712\face2017
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\bin\Debug\Newtonsoft.Json.xml
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\face201712.exe
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\face201712.pdb
+C:\Users\Administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\1_input.baml
+C:\Users\Administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\2input.baml
+C:\Users\Administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\3input.baml
+C:\Users\Administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\1_input.g.cs
+C:\Users\Administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\2input.g.cs
+C:\Users\Administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\3input.g.cs

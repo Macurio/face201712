@@ -63,6 +63,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="1_input.xaml.cs">
+      <DependentUpon>1_input.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="2input.xaml.cs">
+      <DependentUpon>2input.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="3input.xaml.cs">
+      <DependentUpon>3input.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window_camera.xaml.cs">
       <DependentUpon>Window_camera.xaml</DependentUpon>
     </Compile>
@@ -72,6 +81,18 @@
     <Compile Include="Window_select.xaml.cs">
       <DependentUpon>Window_select.xaml</DependentUpon>
     </Compile>
+    <Page Include="1_input.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="2input.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="3input.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

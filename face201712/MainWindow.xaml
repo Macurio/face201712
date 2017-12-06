@@ -13,5 +13,8 @@
         <Button Content="用户信息更新" HorizontalAlignment="Left" Margin="276,100,0,0" VerticalAlignment="Top" Width="75" Click="face_update_Click"/>
         <Button Content="组列表查询" HorizontalAlignment="Left" Margin="72,156,0,0" VerticalAlignment="Top" Width="75" Click="group_list_Click"/>
         <Button Content="用户信息删除" HorizontalAlignment="Left" Margin="173,100,0,0" VerticalAlignment="Top" Width="75" Click="face_delete_Click"/>
+        <Button Content="人脸识别" HorizontalAlignment="Left" Margin="376,100,0,0" VerticalAlignment="Top" Width="75" Click="face_identify_Click"/>
+        <Button Content="组内复制用户" HorizontalAlignment="Left" Margin="276,156,0,0" VerticalAlignment="Top" Width="75" Click="group_add_user_Click"/>
+        <Button Content="组内删除用户" HorizontalAlignment="Left" Margin="376,156,0,0" VerticalAlignment="Top" Width="75" Click="group_delete_user_Click"/>
     </Grid>
 </Window>
