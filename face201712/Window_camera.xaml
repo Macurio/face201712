@@ -1,0 +1,13 @@
+﻿<Window x:Class="face201712.Window_camera"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window_camera" 
+        xmlns:WPFMediaKit="clr-namespace:WPFMediaKit.DirectShow.Controls;assembly=WPFMediaKit"
+        Height="200" Width="200" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid>
+        <Border x:Name="b" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="172" VerticalAlignment="Top" Width="194">
+            <WPFMediaKit:VideoCaptureElement  x:Name="vce" Margin="0,37,0,0"/>
+        </Border>
+        <Button x:Name="btnCapture" Content="录入" Click="btnCapture_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="39"/>
+    </Grid>
+</Window>

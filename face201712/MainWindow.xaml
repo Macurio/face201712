@@ -1,0 +1,17 @@
+﻿<Window x:Class="face201712.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid RenderTransformOrigin="0.495,0.411">
+        <Button Content="人脸比对" HorizontalAlignment="Left" Margin="276,42,0,0" VerticalAlignment="Top" Width="75" Click="face_match_Click"/>
+        <Button Content="用户信息查询" HorizontalAlignment="Left" Margin="72,100,0,0" VerticalAlignment="Top" Width="75" Click="user_info_Click"/>
+        <Button Content="退出" HorizontalAlignment="Left" Margin="72,214,0,0" VerticalAlignment="Top" Width="75" Click="exit_Click"/>
+        <Button Content="人脸认证" HorizontalAlignment="Left" Margin="173,42,0,0" VerticalAlignment="Top" Width="75" Click="face_verify_Click"/>
+        <Button Content="人脸注册" HorizontalAlignment="Left" Margin="72,42,0,0" VerticalAlignment="Top" Width="75" Click="face_register_Click"/>
+        <Button Content="人脸检测" HorizontalAlignment="Left" Margin="376,42,0,0" VerticalAlignment="Top" Width="75" Click="face_detect_Click"/>
+        <Button Content="组内用户查询" HorizontalAlignment="Left" Margin="173,156,0,0" VerticalAlignment="Top" Width="75" Click="group_users_Click"/>
+        <Button Content="用户信息更新" HorizontalAlignment="Left" Margin="276,100,0,0" VerticalAlignment="Top" Width="75" Click="face_update_Click"/>
+        <Button Content="组列表查询" HorizontalAlignment="Left" Margin="72,156,0,0" VerticalAlignment="Top" Width="75" Click="group_list_Click"/>
+        <Button Content="用户信息删除" HorizontalAlignment="Left" Margin="173,100,0,0" VerticalAlignment="Top" Width="75" Click="face_delete_Click"/>
+    </Grid>
+</Window>
