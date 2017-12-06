@@ -2,11 +2,9 @@ c:\users\administrator\documents\visual studio 2013\Projects\face201712\face2017
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\face201712.csprojResolveAssemblyReference.cache
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\MainWindow.baml
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\Window_camera.baml
-c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\Window_input.baml
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\Window_select.baml
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\MainWindow.g.cs
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\Window_camera.g.cs
-c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\Window_input.g.cs
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\Window_select.g.cs
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\App.g.cs
 c:\users\administrator\documents\visual studio 2013\Projects\face201712\face201712\obj\Debug\face201712_MarkupCompile.cache
